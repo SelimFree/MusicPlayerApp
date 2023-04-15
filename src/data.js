@@ -33,7 +33,6 @@ function GetMusic() {
             audio: audio1,
             cover: img1,
             id: uuidv4(),
-            active: true,
             color: ["#a02527", "#882a2c"],
         },
 
@@ -43,7 +42,6 @@ function GetMusic() {
             audio: audio2,
             cover: img2,
             id: uuidv4(),
-            active: false,
             color: ["#9a66cb", "#ad759a"],
         },
 
@@ -53,7 +51,6 @@ function GetMusic() {
             audio: audio3,
             cover: img3,
             id: uuidv4(),
-            active: false,
             color: ["#000000", "#3f3f3f"],
         },
 
@@ -63,7 +60,6 @@ function GetMusic() {
             audio: audio4,
             cover: img4,
             id: uuidv4(),
-            active: false,
             color: ["#B15739", "#465444"],
         },
 
@@ -73,7 +69,6 @@ function GetMusic() {
             audio: audio5,
             cover: img5,
             id: uuidv4(),
-            active: false,
             color: ["#E1C058", "#B6AA7E"],
         },
 
@@ -83,7 +78,6 @@ function GetMusic() {
             audio: audio6,
             cover: img6,
             id: uuidv4(),
-            active: false,
             color: ["#8B171A", "#E9E2B5"],
         },
 
@@ -93,7 +87,6 @@ function GetMusic() {
             audio: audio7,
             cover: img7,
             id: uuidv4(),
-            active: false,
             color: ["#737270", "#FEFEFE"],
         },
 
@@ -103,7 +96,6 @@ function GetMusic() {
             audio: audio8,
             cover: img8,
             id: uuidv4(),
-            active: false,
             color: ["#163343", "#7D95A1"],
         },
 
@@ -113,17 +105,15 @@ function GetMusic() {
             audio: audio9,
             cover: img9,
             id: uuidv4(),
-            active: false,
             color: ["#FA9DAB", "#DD4E8D"],
         },
 
         {
             name: "Timbaland X Give It To Me feat. Nelly Furtado",
             artist: "Nelly Furtado, Justin Timberlake",
-            audio: audio9,
-            cover: img9,
+            audio: audio10,
+            cover: img10,
             id: uuidv4(),
-            active: false,
             color: ["#1B211B", "#E05B22"],
         },
     ];

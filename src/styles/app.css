@@ -2,6 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: 5px;
+    scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.5);
+    border-radius: 20px;
+    border: transparent;
+}
+
+body {
+    font-family: "Lato", sans-serif;
 }
 
 h1,
@@ -10,6 +30,25 @@ h3 {
     color: rgb(55, 55, 55);
 }
 
+.App {
+    transition: all 0.5s ease;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+}
+
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
+}
 .song-container {
     min-height: 60vh;
     display: flex;
@@ -25,6 +64,8 @@ h3 {
 
 .song-container h2 {
     padding: 3rem 1rem 1rem 1rem;
+    font-weight: 700;
+    text-align: center;
 }
 
 .song-container h3 {
@@ -39,6 +80,25 @@ h3 {
     justify-content: space-between;
 }
 
+.track {
+    width: 100%;
+    height: 1rem;
+    background-color: aquamarine;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.animate-track {
+    width: 100%;
+    height: 1rem;
+    background-color: rgb(203, 203, 203);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
 .time-control {
     width: 50%;
     display: flex;
@@ -46,11 +106,13 @@ h3 {
 
 .time-control input {
     width: 100%;
-    padding: 1rem 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .time-control p {
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
     text-align: center;
 }
 
@@ -67,11 +129,11 @@ h3 {
 }
 
 .spin {
-    animation: spin 5s linear infinite;
+    animation: spin 15s linear infinite;
 }
 
 .not-spin {
-    animation: spin 5s linear infinite paused;
+    animation: spin 15s linear infinite paused;
 }
 
 @keyframes spin {
@@ -80,5 +142,115 @@ h3 {
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+.libary-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20rem;
+    box-shadow: 2px 2px 50px rgb(204, 204, 204);
+    overflow-y: scroll;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.libary-container h2 {
+    padding: 2rem;
+}
+
+.library-song-container {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.library-song-container:hover {
+    background-color: rgb(222, 222, 255);
+}
+
+.library-song-container img {
+    width: 30%;
+}
+
+.library-song-container {
+    display: flex;
+}
+
+.song-description {
+    padding-left: 1rem;
+}
+
+.song-description h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgb(55, 55, 55);
+}
+
+.song-description h4 {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: rgb(100, 100, 100);
+}
+
+.active {
+    background-color: rgb(184, 184, 250);
+}
+
+.opened {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.main-pushed {
+    margin-left: 30%;
+}
+
+nav {
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border: 2px solid rgb(65, 65, 65);
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+nav button:hover {
+    background-color: rgb(65, 65, 65);
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .song-container img {
+        width: 60%;
+    }
+
+    .time-control {
+        width: 90%;
+    }
+
+    .play-control {
+        width: 60%;
+    }
+
+    nav button {
+        z-index: 10;
+    }
+
+    .libary-container {
+        width: 100%;
+        background-color: white;
     }
 }
