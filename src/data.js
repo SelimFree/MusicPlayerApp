@@ -11,6 +11,7 @@ import img7 from "./images/7.png";
 import img8 from "./images/8.png";
 import img9 from "./images/9.png";
 import img10 from "./images/10.png";
+import img11 from "./images/11.png";
 
 //Song audio
 import audio1 from "./audio/1.mp3";
@@ -23,6 +24,7 @@ import audio7 from "./audio/7.mp3";
 import audio8 from "./audio/8.mp3";
 import audio9 from "./audio/9.mp3";
 import audio10 from "./audio/10.mp3";
+import audio11 from "./audio/11.mp3";
 
 //
 function GetMusic() {
@@ -109,10 +111,19 @@ function GetMusic() {
         },
 
         {
-            name: "Timbaland X Give It To Me feat. Nelly Furtado",
-            artist: "Nelly Furtado, Justin Timberlake",
+            name: "Give It To Me",
+            artist: "Nelly Furtado, Justin Timberlake, Timbaland",
             audio: audio10,
             cover: img10,
+            id: uuidv4(),
+            color: ["#1B211B", "#E05B22"],
+        },
+
+        {
+            name: "Star Wars- The Imperial March (Darth Vader's Theme)",
+            artist: "John Williams",
+            audio: audio11,
+            cover: img11,
             id: uuidv4(),
             color: ["#1B211B", "#E05B22"],
         },
