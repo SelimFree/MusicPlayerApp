@@ -10,6 +10,7 @@ function App() {
     //Refs
     const audioRef = useRef(null);
 
+    //States
     const [songs] = useState(data());
     let randomSong = Math.floor(Math.random() * songs.length);
 
@@ -21,6 +22,7 @@ function App() {
         animationPercentage: 0,
     });
     const [isOpened, setIsOpened] = useState(false);
+
     //Handlers
     const timeUpdateHandler = (e) => {
         const currentTime = e.target.currentTime;
@@ -41,9 +43,11 @@ function App() {
         }
         await setCurrentSong(songs[newSongIndex]);
 
+        //wait 500 milliseconds to avoid event overlapping
         await setTimeout(() => {
             if (isPlaying) audioRef.current.play();
-        }, 1000)
+        }, 500)
+
 
     };
 
