@@ -12,8 +12,8 @@
 /build
 
 # assets
-/audio
-/images
+audio/
+images/
 
 # misc
 .DS_Store
