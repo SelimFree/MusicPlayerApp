@@ -45,6 +45,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]::-moz-range-thumb {
+    appearance: none;
     -webkit-appearance: none;
     background: transparent;
     border: none;
@@ -107,6 +108,7 @@ input[type="range"]::-moz-range-thumb {
 
 .time-control input {
     width: 100%;
+    appearance: none;
     -webkit-appearance: none;
     background-color: transparent;
     cursor: pointer;
